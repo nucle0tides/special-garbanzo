@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "name": "special-garbanzo",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.7.2",
+    "@types/react": "^17.0.37",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.3.0",
+    "typescript": "^4.5.4"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nucle0tides/special-garbanzo.git"
+  },
+  "author": "juno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nucle0tides/special-garbanzo/issues"
+  },
+  "homepage": "https://github.com/nucle0tides/special-garbanzo#readme"
+}
