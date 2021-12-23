@@ -1,19 +1,42 @@
 import styled from "@emotion/styled";
-import Spacer from "../Spacer"
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-const Navigation = () => <Wrapper><Spacer /><div>navigation</div></Wrapper>;
+const Navigation = (props) => {
+  const router = useRouter();
+
+  return (
+    <Wrapper {...props}>
+      <ul>
+        {[
+          { title: "Home", link: "/" },
+          { title: "About", link: "/about" },
+          { title: "Industrial Design", link: "/industrial-design" },
+          { title: "Illustration", link: "/illustration" },
+          { title: "Textile Work", link: "/textile-work" },
+        ].map((item, idx) => {
+          if (router.pathname === "/" && item.link === "/") {
+            return null;
+          }
+
+          return (
+            <li>
+              <Link href={`${item.link}`}>
+                <a>{item.title}</a>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.nav`
-  width: 240px;
-  height: 100%;
-  overflow-y: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.12);
-
-  display: flex;
-  flex-direction: column;
+  ul {
+    text-decoration: none;
+    list-style-type: none;
+  }
 `;
 
 export default Navigation;
